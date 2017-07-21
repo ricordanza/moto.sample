@@ -9,9 +9,3 @@ def list_ec2_instances():
         for res in response.get('Reservations', []):
             for instance in res.get('Instances', []):
                 yield instance['InstanceId']
-
-def main():
-    print [i for i in list_ec2_instances()]
-
-if __name__ == '__main__':
-    main()

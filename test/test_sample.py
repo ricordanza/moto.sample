@@ -26,8 +26,10 @@ class TestSample(unittest.TestCase):
 
     @mock_ec2
     def test_list_ec2_instances(self):
+        self.__moto_setup()
         instances = [e for e in list_ec2_instances()]
-        self.assertEqual([], instances)
+        self.assertEqual(len(instances), 1)
+        self.assertEqual([self.instance_id], instances)
 
 def suite():
     suite = unittest.TestSuite()
