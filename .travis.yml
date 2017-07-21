@@ -1,7 +1,6 @@
 sudo: false
 language: python
 before_script:
-  - pip install -r requirements.txt
   - export AWS_DEFAULT_REGION=ap-northeast-1
   - chmod +x test.sh
 script: 
