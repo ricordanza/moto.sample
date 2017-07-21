@@ -1,0 +1,7 @@
+*.pyc
+*~
+*.bak
+.DS_Store
+.coverage
+*.egg-info/
+__pycache__/
