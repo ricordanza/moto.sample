@@ -2,6 +2,7 @@
 
 from boto3.session import Session
 
-def get_client():
-    return Session().client('ec2')
-    #return Session(profile_name='<profile_name_here>').client('ec2')
+def get_client(_type):
+    #return Session().client(_type)
+    #return Session(profile_name='<profile_name_here>').client(_type)
+    return Session(profile_name='dev').client(_type)
