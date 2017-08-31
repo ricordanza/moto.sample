@@ -2,6 +2,8 @@ sudo: false
 language: python
 before_script:
   - export AWS_DEFAULT_REGION=ap-northeast-1
-  - chmod +x test.sh
+  - chmod +x coverage.sh
 script: 
-  - ./test.sh
+  - ./coverage.sh
+after_success:
+  - coveralls
